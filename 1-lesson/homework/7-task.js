@@ -1,4 +1,5 @@
 //Ask 10 questions and display the answers in a short text in an alert
+
 let questionOne = prompt("What is your name");
 alert("Your name = " + questionOne);
 let questionTwo = prompt("What is your age");
