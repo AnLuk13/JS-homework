@@ -1,0 +1,36 @@
+.inputs {
+  display: flex;
+  gap: 15px;
+}
+
+.label {
+  font-size: 20px;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  font-size: 22px;
+  padding: 15px;
+  border: 1px solid greenyellow;
+  border-radius: 7px;
+  width: 350px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.delete {
+  height: 35px;
+  width: 35px;
+}
+
+p {
+  margin: 0 10px 0 0;
+  font-weight: bold;
+}
+
+.flex {
+  display: flex;
+}
