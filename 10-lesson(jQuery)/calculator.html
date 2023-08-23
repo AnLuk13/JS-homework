@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="/8-lesson(Events)/styles.css" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="/8-lesson(Events)/homework/calculator.svg"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.js"
+      integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="display-area">
+        <input class="text-display" id="display" type="text" disabled />
+        <button class="backspace">
+          <img src="/8-lesson(Events)/homework/backspace.png" alt="" />
+        </button>
+      </div>
+      <div class="buttons">
+        <button class="symbols digit a">7</button>
+        <button class="symbols digit">8</button>
+        <button class="symbols digit">9</button>
+        <button class="symbols operator" id="multiply">*</button>
+        <button class="symbols digit">4</button>
+        <button class="symbols digit">5</button>
+        <button class="symbols digit">6</button>
+        <button class="symbols operator" id="devide">/</button>
+        <button class="symbols digit">1</button>
+        <button class="symbols digit">2</button>
+        <button class="symbols digit">3</button>
+        <button class="symbols operator" id="minus">-</button>
+        <button class="symbols digit">0</button>
+        <button class="symbols dot">.</button>
+        <button class="symbols" id="clear">C</button>
+        <button class="symbols operator" id="plus">+</button>
+        <button class="symbols equal" id="equal">=</button>
+      </div>
+    </div>
+    <script src="/10-lesson(jQuery)/homework/2-task.js"></script>
+  </body>
+</html>

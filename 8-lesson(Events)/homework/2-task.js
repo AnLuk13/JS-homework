@@ -19,22 +19,18 @@ form.addEventListener("submit", (event) => {
   p.textContent = name.value;
   const span = document.createElement("span");
   span.textContent = `by ${artist.value}`;
-
   const button = document.createElement("button");
   button.classList.add("delete");
-
   const img = document.createElement("img");
   img.src = "/8-lesson(Events)/homework/trash-solid.svg";
   img.alt = "Delete";
 
   button.appendChild(img);
-
   div.appendChild(p);
   div.appendChild(span);
   li.appendChild(div);
   li.appendChild(button);
   ul.appendChild(li);
-
   list.appendChild(ul);
 
   name.value = "";

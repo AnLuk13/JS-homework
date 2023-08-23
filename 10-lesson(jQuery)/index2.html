@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.js"
+      integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      input[type="checkbox"] {
+        width: 40px;
+        height: 40px;
+        margin: 0 5px;
+      }
+
+      .column {
+        display: flex;
+        flex-direction: column;
+      }
+      .inputs {
+        display: flex;
+        gap: 15px;
+      }
+
+      .label {
+        font-size: 20px;
+      }
+
+      ul {
+        list-style: none;
+      }
+
+      li {
+        font-size: 22px;
+        padding: 15px;
+        border: 1px solid black;
+        border-radius: 2px;
+        width: 350px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .delete {
+        height: 40px;
+        width: 60px;
+        border-radius: 5px;
+      }
+
+      p {
+        margin: 0;
+        font-weight: bold;
+        font-size: 25px;
+      }
+
+      .flex {
+        display: flex;
+      }
+
+      .highlight {
+        background-color: lightgreen;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>To do:</h1>
+    <form id="form" class="inputs">
+      <label class="label" for="name">Name:</label>
+      <input type="text" name="name" id="name" />
+      <label class="label" for="desc">Description:</label>
+      <input type="text" name="desc" id="desc" />
+      <button class="label" type="submit">Done</button>
+    </form>
+    <h1>Notes:</h1>
+    <ul id="list"></ul>
+    <script src="/10-lesson(jQuery)/homework/3-task.js"></script>
+  </body>
+</html>
