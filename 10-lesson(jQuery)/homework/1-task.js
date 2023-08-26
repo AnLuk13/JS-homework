@@ -26,3 +26,22 @@ $(document).ready(() => {
 //       .animate({ top: "10px" }, 1000);
 //   });
 // });
+
+// $(document).ready(() => {
+//   $(".btn").click((e) => {
+//     $(".rectangle")
+//       .queue("animationQueue", (next) => {
+//         $(".rectangle").animate({ left: "80%" }, 1000, next);
+//       })
+//       .queue("animationQueue", (next) => {
+//         $(".rectangle").animate({ top: "60%" }, 1000, next);
+//       })
+//       .queue("animationQueue", (next) => {
+//         $(".rectangle").animate({ right: "80%" }, 1000, next);
+//       })
+//       .queue("animationQueue", () => {
+//         $(".rectangle").animate({ bottom: "80%" }, 1000);
+//       })
+//       .dequeue("animationQueue");
+//   });
+// });

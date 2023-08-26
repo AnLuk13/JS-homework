@@ -20,7 +20,7 @@ const setTimer = () => {
   return promise;
 };
 
-button.addEventListener("click", () => {
+button.addEventListener("click", (event) => {
   event.preventDefault();
   setTimer().then(() => {
     dislayData();

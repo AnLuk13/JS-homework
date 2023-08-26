@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: beige;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .inputs {
+        display: flex;
+        gap: 10px;
+      }
+
+      h2 {
+        text-align: center;
+      }
+      .map__container {
+        margin: auto;
+        width: 900px;
+        height: 550px;
+      }
+
+      .map {
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="map">
+      <h2>Location Program</h2>
+      <div id="map" class="map__container"></div>
+    </section>
+    <div class="inputs">
+      <label for="city">City:</label>
+      <input type="text" id="city" name="city" />
+      <button id="submitCity">Submit</button>
+
+      <label for="source">From:</label>
+      <input type="text" id="source" name="source" />
+      <label for="destination">To:</label>
+      <input type="text" id="destination" name="destination" />
+      <button id="showPath">Show Path</button>
+    </div>
+    <script
+      async
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAa0rW4l5vhSZUg7FG07yL4P1S7yuLl0rw&callback=initMap&libraries=places"
+    ></script>
+    <script src="/13-lesson(Google API)/script.js"></script>
+  </body>
+</html>

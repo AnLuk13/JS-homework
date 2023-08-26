@@ -11,12 +11,16 @@ let operator = "";
 let checkOperator = false;
 let checkBackspace = false;
 
-backspace.addEventListener("click", (event) => {
+backspace.addEventListener("click", () => {
   if (number.length < 2) {
     checkBackspace = true;
     display.value = "0";
+    number = "";
+    // console.log(display.value, display.value.length);
   } else if (!checkBackspace) {
-    numberArrayBackspace = number.trim().slice(0, -1);
+    numberArrayBackspace = number.trim().slice(0, -1).trim();
+    console.log(number, number.length);
+    // console.log(number);
     number = numberArrayBackspace;
     display.value = number;
   }
@@ -32,10 +36,15 @@ buttons.addEventListener("click", (event) => {
     checkOperator = false;
     checkBackspace = false;
   } else if (clickedButton.classList.contains("operator")) {
+    const isLastCharDot = isLastChar(number);
+    if (isLastCharDot) {
+      number = number.slice(0, -1);
+    }
     const newOperator = clickedButton.textContent;
     if (!checkOperator) {
       operator = clickedButton.textContent;
       number += ` ${operator} `;
+
       display.value = number;
       checkOperator = true;
       checkBackspace = false;
@@ -47,9 +56,12 @@ buttons.addEventListener("click", (event) => {
       display.value = number;
     }
   } else if (clickedButton.classList.contains("dot")) {
-    number += ".";
+    const isLastCharDot = isLastChar(number);
+    if (!isLastCharDot) {
+      number += ".";
+    }
     display.value = number;
-    checkOperator = true;
+    checkOperator = false;
     checkBackspace = false;
   } else if (clickedButton.id === "clear") {
     number = "";
@@ -61,3 +73,8 @@ buttons.addEventListener("click", (event) => {
     checkBackspace = false;
   }
 });
+
+function isLastChar(number) {
+  const lastChar = number.charAt(number.length - 1);
+  return lastChar === ".";
+}

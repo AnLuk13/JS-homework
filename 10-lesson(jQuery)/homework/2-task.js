@@ -12,8 +12,9 @@ $(document).ready(() => {
     if (number.length < 2) {
       checkBackspace = true;
       display.val("0");
+      number = "";
     } else if (!checkBackspace) {
-      numberArrayBackspace = number.trim().slice(0, -1);
+      const numberArrayBackspace = number.trim().slice(0, -1).trim();
       number = numberArrayBackspace;
       display.val(number);
     }
@@ -27,7 +28,12 @@ $(document).ready(() => {
       number += digit;
       display.val(number);
       checkOperator = false;
+      checkBackspace = false;
     } else if (clickedButton.hasClass("operator")) {
+      const isLastCharDot = isLastChar(number);
+      if (isLastCharDot) {
+        number = number.slice(0, -1);
+      }
       const newOperator = clickedButton.text();
       if (!checkOperator) {
         operator = clickedButton.text();
@@ -37,19 +43,24 @@ $(document).ready(() => {
         checkBackspace = false;
       } else {
         operator = newOperator;
-        numberArray = number.trim().split(" ");
+        const numberArray = number.trim().split(" ");
         numberArray.pop();
         number = numberArray.join(" ") + ` ${operator} `;
         display.val(number);
       }
     } else if (clickedButton.hasClass("dot")) {
-      number += ".";
+      const isLastCharDot = isLastChar(number);
+      if (!isLastCharDot) {
+        number += ".";
+      }
       display.val(number);
-      checkOperator = true;
+      checkOperator = false;
       checkBackspace = false;
     } else if (clickedButton.attr("id") === "clear") {
       number = "";
       display.val("0");
+      checkOperator = false;
+      checkBackspace = false;
     } else if (clickedButton.attr("id") === "equal") {
       const result = eval(number);
       display.val(result);
@@ -57,4 +68,9 @@ $(document).ready(() => {
       checkBackspace = false;
     }
   });
+
+  function isLastChar(number) {
+    const lastChar = number.charAt(number.length - 1);
+    return lastChar === ".";
+  }
 });
