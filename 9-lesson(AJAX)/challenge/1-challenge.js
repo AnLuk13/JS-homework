@@ -21,17 +21,17 @@ form.addEventListener("submit", (e) => {
     userId: 1,
   };
 
-  sendHttpRequest(
-    "POST",
-    "https://jsonplaceholder.typicode.com/posts",
-    body
-  ).then((resp) => {
-    const listItem = document.createElement("li");
-    listItem.id = resp.id;
-    listItem.classList.add("list-group-item");
-    listItem.innerHTML = `<span>${listItem.id}. ${description}</span><button class="btn btn-danger">Delete</button>`;
-    list.appendChild(listItem);
-  });
+  sendHttpRequest("POST", "https://jsonplaceholder.typicode.com/posts", body)
+    .then((resp) => {
+      const listItem = document.createElement("li");
+      listItem.id = resp.id;
+      listItem.classList.add("list-group-item");
+      listItem.innerHTML = `<span>${listItem.id}. ${description}</span><button class="btn btn-danger">Delete</button>`;
+      list.appendChild(listItem);
+    })
+    .catch((error) => {
+      console.error("The error is ", error);
+    });
 });
 
 const data = {
@@ -62,4 +62,7 @@ sendHttpRequest("GET", "https://jsonplaceholder.typicode.com/posts")
       listItem.innerHTML = `<span>${listItem.id}. ${data.desc}</span><button class="btn btn-danger">Delete</button>`;
       list.appendChild(listItem);
     })
-  );
+  )
+  .catch((error) => {
+    console.error("The error is ", error);
+  });
