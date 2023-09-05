@@ -1,7 +1,7 @@
 //Create a function that returns a promise. The promise should resolve after a
 //random delay (between 1 to 5 seconds) with a message like "Promise resolved after X seconds".
 
-const randomDelay = Math.floor(Math.random() * 4000) + 1000;
+const randomDelay = Math.ceil(Math.random() * 5) * 1000;
 
 const resolve = () => {
   const promise = new Promise((resolve, reject) => {

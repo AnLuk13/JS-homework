@@ -1,0 +1,1 @@
+(()=>{var o={21:(o,e)=>{e.displayName=function(o){return console.log(`Hello ${o}`)}},49:(o,e)=>{e.name="Antonio"}},e={};function n(r){var t=e[r];if(void 0!==t)return t.exports;var a=e[r]={exports:{}};return o[r](a,a.exports,n),a.exports}(()=>{const{name:o}=n(49),{displayName:e}=n(21);e(o)})()})();
