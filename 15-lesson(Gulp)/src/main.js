@@ -1,4 +1,5 @@
-const { name } = require("./variables.js");
-const { displayName } = require("./helper.js");
+// import name from "./variables.js";
+// import displayName from "./helper.js";
+import "./test.scss";
 
-displayName(name);
+// displayName(name);

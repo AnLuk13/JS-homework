@@ -1,4 +1,4 @@
-function displayName(name) {
+export function displayName(name) {
   return console.log(`Hello ${name}`);
 }
 
