@@ -1,0 +1,13 @@
+.App-div {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+  text-align: center;
+}
+
+.App-div2 {
+  display: flex;
+  justify-content: center;
+}
