@@ -1,0 +1,22 @@
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .login-form__elems {
+      display: flex;
+      gap: 10px;
+    }
+
+    button[type="submit"] {
+      width: 50px;
+      padding: 5px;
+    }
+  }
+}
