@@ -1,0 +1,19 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 300px;
+}
+
+.label {
+  font-size: 18px;
+}
+
+.input {
+  height: 30px;
+  font-size: 18px;
+}
+
+.submit {
+  height: 30px;
+}
