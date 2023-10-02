@@ -1,10 +1,16 @@
 import axios from "axios";
-import { Link, useLoaderData } from "react-router-dom";
+import { Link, useLoaderData, useNavigate } from "react-router-dom";
 
 function ItemList() {
   const products = useLoaderData();
+  const navigate = useNavigate();
+
+  const goBack = () => {
+    navigate("/");
+  };
+
   return (
-    <div>
+    <div style={{ marginBottom: "20px" }}>
       {products.map((product) => (
         <div key={product.id}>
           <Link to={product.id.toString()}>
@@ -12,6 +18,7 @@ function ItemList() {
           </Link>
         </div>
       ))}
+      <button onClick={goBack}>Go back</button>
     </div>
   );
 }
